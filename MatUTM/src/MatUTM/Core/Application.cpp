@@ -49,10 +49,12 @@ namespace MatUTM {
 			}
 			m_EditorLayer->OnImGuiRender();
 			
+			ImGui::Begin("TEst");
+			ImGui::Text("Renderer Data:");
 
+			ImGui::End();
 
-
-
+			
 
 			m_Window->PoolEvents();
 			

@@ -145,6 +145,8 @@
     <ClInclude Include="src\MatUTM\Core\Log\Log.h" />
     <ClInclude Include="src\MatUTM\Core\macros.h" />
     <ClInclude Include="src\MathUTM.h" />
+    <ClInclude Include="src\Scripting\ScriptAPI.h" />
+    <ClInclude Include="src\Scripting\ScriptLUA.h" />
     <ClInclude Include="src\mathpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_features.hpp" />
@@ -517,6 +519,7 @@
     <ClCompile Include="src\MatUTM\Core\Layers\LayerStack.cpp" />
     <ClCompile Include="src\MatUTM\Core\Log\Log.cpp" />
     <ClCompile Include="src\MatUTM\Core\main.cpp" />
+    <ClCompile Include="src\Scripting\ScriptLUA.cpp" />
     <ClCompile Include="src\mathpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
