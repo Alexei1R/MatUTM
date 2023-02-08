@@ -17,12 +17,14 @@ IncludeDir["GLFW"] = "MatUTM/vendor/GLFW/include"
 IncludeDir["Glad"] = "MatUTM/vendor/Glad/include"
 IncludeDir["ImGui"] = "MatUTM/vendor/imgui"
 IncludeDir["glm"] = "MatUTM/vendor/glm"
+IncludeDir["lua"] = "MatUTM/vendor/lua"
 
 
 group "Dependencies"
 	include "MatUTM/vendor/GLFW"
 	include "MatUTM/vendor/Glad"
 	include "MatUTM/vendor/imgui"
+	include "MatUTM/vendor/lua"
 group ""
 
 
@@ -53,6 +55,7 @@ project "MatUTM"
 		"%{prj.name}/vendor/stb_image/**.cpp",
 		"%{prj.name}/vendor/glm/glm/**.hpp",
 		"%{prj.name}/vendor/glm/glm/**.inl",
+
 	}
 
 	defines
@@ -68,6 +71,7 @@ project "MatUTM"
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.glm}",
+		"%{IncludeDir.lua}",
 	}
 
 	links 

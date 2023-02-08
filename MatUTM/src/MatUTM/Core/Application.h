@@ -7,6 +7,8 @@
 #include "MatUTM/Core/GUI/EditorLayer.h"
 #include "MatUTM/Core/GUI/GUI.h"
 
+#include "mathpch.h"
+
 
 
 namespace MatUTM {
