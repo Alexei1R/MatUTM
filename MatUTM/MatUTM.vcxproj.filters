@@ -19,8 +19,8 @@
     <Filter Include="src\MatUTM\Core\Log">
       <UniqueIdentifier>{9D4A951E-09AC-722C-9219-B9DEFE79A9EB}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Scripting">
-      <UniqueIdentifier>{6FBC2D98-DB7C-A9CE-A4B7-F24B1037EEAA}</UniqueIdentifier>
+    <Filter Include="src\MatUTM\Scripting">
+      <UniqueIdentifier>{F665F233-E2F4-7BFD-8B13-90F877818CA3}</UniqueIdentifier>
     </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
@@ -66,14 +66,11 @@
     <ClInclude Include="src\MatUTM\Core\macros.h">
       <Filter>src\MatUTM\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\MatUTM\Scripting\ScriptingWindow.h">
+      <Filter>src\MatUTM\Scripting</Filter>
+    </ClInclude>
     <ClInclude Include="src\MathUTM.h">
       <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Scripting\ScriptAPI.h">
-      <Filter>src\Scripting</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Scripting\ScriptLUA.h">
-      <Filter>src\Scripting</Filter>
     </ClInclude>
     <ClInclude Include="src\mathpch.h">
       <Filter>src</Filter>
@@ -1187,8 +1184,8 @@
     <ClCompile Include="src\MatUTM\Core\main.cpp">
       <Filter>src\MatUTM\Core</Filter>
     </ClCompile>
-    <ClCompile Include="src\Scripting\ScriptLUA.cpp">
-      <Filter>src\Scripting</Filter>
+    <ClCompile Include="src\MatUTM\Scripting\ScriptingWindow.cpp">
+      <Filter>src\MatUTM\Scripting</Filter>
     </ClCompile>
     <ClCompile Include="src\mathpch.cpp">
       <Filter>src</Filter>

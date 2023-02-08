@@ -4,16 +4,17 @@
 
 
 namespace MatUTM {
-	Application* Application::s_Instance = nullptr;
 	Application::Application()
 	{
-		s_Instance = (Application*)this;
 		
 		m_Window = new GUI();
 		m_EditorLayer = new MatUTM::EditorLayer();
+		m_ScriptW = new MatUTM::ScriptingWindow(m_EditorLayer);
+
+		PushLayer(m_Window);
+		PushLayer(m_EditorLayer);
+		PushLayer(m_ScriptW);
 		
-		PushOverlay(m_EditorLayer);
-		PushOverlay(m_Window);
 	}
 
 
@@ -54,8 +55,12 @@ namespace MatUTM {
 
 			ImGui::End();
 
-			
+		
 
+
+
+			
+			
 			m_Window->PoolEvents();
 			
 

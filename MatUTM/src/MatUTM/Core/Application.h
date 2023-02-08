@@ -9,6 +9,8 @@
 
 #include "mathpch.h"
 
+#include "MatUTM/Scripting/ScriptingWindow.h"
+
 
 
 namespace MatUTM {
@@ -23,15 +25,11 @@ namespace MatUTM {
 
 		void PushLayer(Layer* layer);
 		void PushOverlay(Layer* layer);
-		inline static Application& GetApp() { return *s_Instance; }
-	public:
 
 
-	public:
-		static Application* s_Instance;
+		
 		
 
-	private:
 
 	private:
 		bool isRunnig = true;
@@ -41,8 +39,12 @@ namespace MatUTM {
 		LayerStack m_LayerStack;
 		EditorLayer* m_EditorLayer;
 		GUI* m_Window;
+		ScriptingWindow* m_ScriptW;
+		
+
 		
 		
 
 	};
+	
 }

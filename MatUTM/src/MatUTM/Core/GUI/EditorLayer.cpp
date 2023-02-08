@@ -6,6 +6,8 @@
 
 
 namespace MatUTM {
+
+
 	EditorLayer::EditorLayer()
 		:Layer("EditorLayer")
 	{
@@ -109,6 +111,11 @@ namespace MatUTM {
 			ImGui::Text("Ssripting test:");
 			ImGui::End();
 
+
+			if (m_ImGuiDraw)
+			{
+				m_ImGuiDraw();
+			}
 
 
 
