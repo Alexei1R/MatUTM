@@ -77,7 +77,8 @@ namespace MatUTM {
 		io.ConfigViewportsNoTaskBarIcon = true;
 
 		// Setup Dear ImGui style
-		ImGui::StyleColorsDark();
+		//ImGui::StyleColorsDark();
+		ImGui::StyleColorsLight();
 		//ImGui::StyleColorsLight();
 
 		// When viewports are enabled we tweak WindowRounding/WindowBg so platform windows can look identical to regular ones.
