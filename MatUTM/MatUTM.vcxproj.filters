@@ -19,11 +19,17 @@
     <Filter Include="src\MatUTM\Core\Log">
       <UniqueIdentifier>{9D4A951E-09AC-722C-9219-B9DEFE79A9EB}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\MatUTM\Ploter">
-      <UniqueIdentifier>{997E9242-0595-90D8-4E0C-1CFABA616160}</UniqueIdentifier>
+    <Filter Include="src\MatUTM\UI">
+      <UniqueIdentifier>{A1AEFB6D-0D6F-77A4-D6A9-C0214229BC80}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\MatUTM\Scripting">
-      <UniqueIdentifier>{F665F233-E2F4-7BFD-8B13-90F877818CA3}</UniqueIdentifier>
+    <Filter Include="src\MatUTM\UI\Ploter">
+      <UniqueIdentifier>{A6D821BE-9267-AB87-3B86-BF8227F4BB2D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\MatUTM\UI\Scripting">
+      <UniqueIdentifier>{E3A0826A-4FD8-CA01-58E2-2E25C498F1FA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\MatUTM\UI\Settings">
+      <UniqueIdentifier>{E1689483-CD62-BDD5-B6CF-53E6A2682342}</UniqueIdentifier>
     </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
@@ -69,14 +75,17 @@
     <ClInclude Include="src\MatUTM\Core\macros.h">
       <Filter>src\MatUTM\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\MatUTM\Ploter\PloterWindow.h">
-      <Filter>src\MatUTM\Ploter</Filter>
+    <ClInclude Include="src\MatUTM\UI\Ploter\PloterWindow.h">
+      <Filter>src\MatUTM\UI\Ploter</Filter>
     </ClInclude>
-    <ClInclude Include="src\MatUTM\Scripting\ScriptingLua.h">
-      <Filter>src\MatUTM\Scripting</Filter>
+    <ClInclude Include="src\MatUTM\UI\Scripting\ScriptingLua.h">
+      <Filter>src\MatUTM\UI\Scripting</Filter>
     </ClInclude>
-    <ClInclude Include="src\MatUTM\Scripting\ScriptingWindow.h">
-      <Filter>src\MatUTM\Scripting</Filter>
+    <ClInclude Include="src\MatUTM\UI\Scripting\ScriptingWindow.h">
+      <Filter>src\MatUTM\UI\Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MatUTM\UI\Settings\SettingsWindow.h">
+      <Filter>src\MatUTM\UI\Settings</Filter>
     </ClInclude>
     <ClInclude Include="src\MathUTM.h">
       <Filter>src</Filter>
@@ -1193,14 +1202,17 @@
     <ClCompile Include="src\MatUTM\Core\main.cpp">
       <Filter>src\MatUTM\Core</Filter>
     </ClCompile>
-    <ClCompile Include="src\MatUTM\Ploter\PloterWindow.cpp">
-      <Filter>src\MatUTM\Ploter</Filter>
+    <ClCompile Include="src\MatUTM\UI\Ploter\PloterWindow.cpp">
+      <Filter>src\MatUTM\UI\Ploter</Filter>
     </ClCompile>
-    <ClCompile Include="src\MatUTM\Scripting\ScriptingLua.cpp">
-      <Filter>src\MatUTM\Scripting</Filter>
+    <ClCompile Include="src\MatUTM\UI\Scripting\ScriptingLua.cpp">
+      <Filter>src\MatUTM\UI\Scripting</Filter>
     </ClCompile>
-    <ClCompile Include="src\MatUTM\Scripting\ScriptingWindow.cpp">
-      <Filter>src\MatUTM\Scripting</Filter>
+    <ClCompile Include="src\MatUTM\UI\Scripting\ScriptingWindow.cpp">
+      <Filter>src\MatUTM\UI\Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MatUTM\UI\Settings\SettingsWindow.cpp">
+      <Filter>src\MatUTM\UI\Settings</Filter>
     </ClCompile>
     <ClCompile Include="src\mathpch.cpp">
       <Filter>src</Filter>

@@ -11,11 +11,13 @@ namespace MatUTM {
 		m_EditorLayer = new MatUTM::EditorLayer();
 		m_ScriptW = new MatUTM::ScriptingWindow(m_EditorLayer);
 		m_PloterW = new MatUTM::PloterWindow(m_EditorLayer);
+		m_SettingsW = new MatUTM::SettingsWindow(m_EditorLayer);
 
 		PushLayer(m_Window);
 		PushLayer(m_EditorLayer);
 		PushLayer(m_ScriptW);
 		PushLayer(m_PloterW);
+		PushLayer(m_SettingsW);
 		
 	}
 

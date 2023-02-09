@@ -7,10 +7,12 @@
 #include "MatUTM/Core/GUI/EditorLayer.h"
 #include "MatUTM/Core/GUI/GUI.h"
 
+
 #include "mathpch.h"
 
-#include "MatUTM/Scripting/ScriptingWindow.h"
-#include "MatUTM/Ploter/PloterWindow.h"
+#include "MatUTM/UI/Scripting/ScriptingWindow.h"
+#include "MatUTM/UI/Ploter/PloterWindow.h"
+#include "MatUTM/UI/Settings/SettingsWindow.h"
 
 
 namespace MatUTM {
@@ -41,6 +43,7 @@ namespace MatUTM {
 		GUI* m_Window;
 		ScriptingWindow* m_ScriptW;
 		PloterWindow* m_PloterW;
+		SettingsWindow* m_SettingsW;
 		
 
 		

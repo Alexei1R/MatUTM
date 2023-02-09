@@ -111,6 +111,12 @@
     <ClInclude Include="include\imgui_internal.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="include\implot.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\implot_internal.h">
+      <Filter>include</Filter>
+    </ClInclude>
     <ClInclude Include="include\imstb_rectpack.h">
       <Filter>include</Filter>
     </ClInclude>
@@ -243,6 +249,15 @@
       <Filter>include</Filter>
     </ClCompile>
     <ClCompile Include="include\imgui_widgets.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="include\implot.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="include\implot_demo.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="include\implot_items.cpp">
       <Filter>include</Filter>
     </ClCompile>
   </ItemGroup>

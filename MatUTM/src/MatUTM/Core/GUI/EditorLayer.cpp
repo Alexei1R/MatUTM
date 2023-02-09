@@ -80,8 +80,8 @@ namespace MatUTM {
 			//ImGui::End();
 
 
-			//bool show = false;
-			//ImGui::ShowDemoWindow(&show);
+//			bool show = false;
+//			ImGui::ShowDemoWindow(&show);
 			
 
 
@@ -96,6 +96,10 @@ namespace MatUTM {
 				m_ImGuiDrawPloterWindow();
 			}
 
+			if (m_ImGuiDrawSettingsWindow && m_Settings)
+			{
+				m_ImGuiDrawSettingsWindow();
+			}
 
 
 			ImGui::End();
@@ -129,10 +133,10 @@ namespace MatUTM {
 
 			if (ImGui::BeginMenu("Settings"))
 			{
-				if (ImGui::MenuItem("Package"))
+				if (ImGui::MenuItem("Open Settings"))
 				{
-
-					LOG_CRITICAL("GetPackages")
+					m_Settings = true;
+					LOG_CRITICAL("Settings Open")
 				};
 				ImGui::EndMenu();
 			}

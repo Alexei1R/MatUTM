@@ -1,8 +1,2 @@
-﻿  ScriptingWindow.cpp
-LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
-LINK : warning LNK4217: symbol '__stdio_common_vsscanf' defined in 'libucrtd.lib(input.obj)' is imported by 'Glad.lib(glad.obj)' in function '_vsscanf_s_l'
-LINK : warning LNK4217: symbol 'free' defined in 'libucrtd.lib(free.obj)' is imported by 'Glad.lib(glad.obj)' in function 'free_exts'
-LINK : warning LNK4217: symbol 'malloc' defined in 'libucrtd.lib(malloc.obj)' is imported by 'Glad.lib(glad.obj)' in function 'get_exts'
-LINK : warning LNK4217: symbol 'realloc' defined in 'libucrtd.lib(realloc.obj)' is imported by 'Glad.lib(glad.obj)' in function 'get_exts'
-LINK : warning LNK4217: symbol 'strncmp' defined in 'libucrtd.lib(strncmp.obj)' is imported by 'Glad.lib(glad.obj)' in function 'find_coreGL'
+﻿  SettingsWindow.cpp
   MatUTM.vcxproj -> C:\Users\alexe\OneDrive\Desktop\MatUTM\bin\Debug-windows-x86_64\MatUTM\MatUTM.exe
