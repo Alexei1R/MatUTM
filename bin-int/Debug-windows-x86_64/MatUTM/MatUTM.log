@@ -1,7 +1,2 @@
-﻿  Application.cpp
-  GUI.cpp
-C:\Users\alexe\OneDrive\Desktop\MatUTM\MatUTM\src\MatUTM\Core\GUI\GUI.cpp(59,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-  main.cpp
-  ScriptingWindow.cpp
-  Generating Code...
+﻿  ScriptingWindow.cpp
   MatUTM.vcxproj -> C:\Users\alexe\OneDrive\Desktop\MatUTM\bin\Debug-windows-x86_64\MatUTM\MatUTM.exe

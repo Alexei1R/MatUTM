@@ -10,10 +10,12 @@ namespace MatUTM {
 		m_Window = new GUI();
 		m_EditorLayer = new MatUTM::EditorLayer();
 		m_ScriptW = new MatUTM::ScriptingWindow(m_EditorLayer);
+		m_PloterW = new MatUTM::PloterWindow(m_EditorLayer);
 
 		PushLayer(m_Window);
 		PushLayer(m_EditorLayer);
 		PushLayer(m_ScriptW);
+		PushLayer(m_PloterW);
 		
 	}
 
@@ -50,11 +52,7 @@ namespace MatUTM {
 			}
 			m_EditorLayer->OnImGuiRender();
 			
-			ImGui::Begin("TEst");
-			ImGui::Text("Renderer Data:");
-
-			ImGui::End();
-
+		
 		
 
 

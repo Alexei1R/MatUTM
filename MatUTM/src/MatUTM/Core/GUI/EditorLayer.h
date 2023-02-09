@@ -12,15 +12,17 @@ namespace MatUTM {
 		virtual void OnUpdate()override;
 		virtual void OnImGuiRender() override;
 
-		void SetDrawDataImGui(std::function<void()>& drawData) { m_ImGuiDraw = drawData; };
+		void SetDrawScripting(std::function<void()>& drawData) { m_ImGuiDrawScriptWindow = drawData; };
+		void SetDrawPloter(std::function<void()>& drawData) { m_ImGuiDrawPloterWindow = drawData; };
 
 	public:
 
 
 	private:
 
-		std::function<void()> m_ImGuiDraw;
+		std::function<void()> m_ImGuiDrawScriptWindow;
+		std::function<void()> m_ImGuiDrawPloterWindow;
 
-
+		void DrawMenu();
 	};
 }

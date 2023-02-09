@@ -1,3 +1,6 @@
+#include "MathUTM.h"
+
+
 #pragma once
 #include "MathUTM.h"
 #include "MatUTM/Core/GUI/EditorLayer.h"
@@ -5,9 +8,9 @@
 namespace MatUTM {
 
 
-	class ScriptingWindow : public Layer {
+	class PloterWindow : public Layer {
 	public:
-		ScriptingWindow(EditorLayer* editor);
+		PloterWindow(EditorLayer* editor);
 
 
 		void OnAttach()override;
@@ -20,11 +23,11 @@ namespace MatUTM {
 
 
 	private:
-		EditorLayer *m_Editor;
-		
+		EditorLayer* m_Editor;
 
 
-		
+
+
 
 
 	};

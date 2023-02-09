@@ -73,48 +73,27 @@ namespace MatUTM {
 				ImGui::DockSpace(dockspace_id, ImVec2(0.0f, 0.0f), dockspace_flags);
 			}
 
-			if (ImGui::BeginMenuBar())
+			DrawMenu();
+
+			//ImGui::Begin("Settings");
+			//ImGui::Text("Renderer Data:");
+			//ImGui::End();
+
+
+			//bool show = false;
+			//ImGui::ShowDemoWindow(&show);
+			
+
+
+			if (m_ImGuiDrawScriptWindow)
 			{
-				if (ImGui::BeginMenu("File"))
-				{
-					
-
-					if (ImGui::MenuItem("Open Fille"))
-					{
-						LOG_CRITICAL("Open Fille");
-					};
-					if (ImGui::MenuItem("Exit")) LOG_CRITICAL("Close");
-					ImGui::EndMenu();
-				}
-
-
-				if (ImGui::BeginMenu("Settings"))
-				{
-					if (ImGui::MenuItem("Package"))
-					{
-						
-						LOG_CRITICAL("GetPackages")
-					};
-					ImGui::EndMenu();
-				}
-
-				ImGui::EndMenuBar();
+				m_ImGuiDrawScriptWindow();
 			}
 
-			ImGui::Begin("Settings");
-			ImGui::Text("Renderer Data:");
-			ImGui::End();
 
-
-
-			ImGui::Begin("Scripting");
-			ImGui::Text("Ssripting test:");
-			ImGui::End();
-
-
-			if (m_ImGuiDraw)
+			if (m_ImGuiDrawPloterWindow)
 			{
-				m_ImGuiDraw();
+				m_ImGuiDrawPloterWindow();
 			}
 
 
@@ -124,6 +103,60 @@ namespace MatUTM {
 		}
 	}
 
+
+
+
+
+
+	void MatUTM::EditorLayer::DrawMenu() {
+
+
+
+		if (ImGui::BeginMenuBar())
+		{
+			if (ImGui::BeginMenu("File"))
+			{
+
+
+				if (ImGui::MenuItem("Open Fille"))
+				{
+					LOG_CRITICAL("Open Fille");
+				};
+				if (ImGui::MenuItem("Exit")) LOG_CRITICAL("Close");
+				ImGui::EndMenu();
+			}
+
+
+			if (ImGui::BeginMenu("Settings"))
+			{
+				if (ImGui::MenuItem("Package"))
+				{
+
+					LOG_CRITICAL("GetPackages")
+				};
+				ImGui::EndMenu();
+			}
+
+
+			if (ImGui::BeginMenu("Script"))
+			{
+				if (ImGui::MenuItem("New Script", "Ctrl+Shift+n")) {
+					LOG_CRITICAL("New Script");
+				};
+
+				if (ImGui::MenuItem("Save Script", "Ctrl+Shift+n")) {
+					LOG_CRITICAL("Save Script");
+				};
+				
+
+				ImGui::EndMenu();
+			}
+
+
+
+			ImGui::EndMenuBar();
+		}
+	}
 	
 
 

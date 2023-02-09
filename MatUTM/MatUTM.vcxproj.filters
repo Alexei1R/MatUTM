@@ -19,6 +19,9 @@
     <Filter Include="src\MatUTM\Core\Log">
       <UniqueIdentifier>{9D4A951E-09AC-722C-9219-B9DEFE79A9EB}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\MatUTM\Ploter">
+      <UniqueIdentifier>{997E9242-0595-90D8-4E0C-1CFABA616160}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\MatUTM\Scripting">
       <UniqueIdentifier>{F665F233-E2F4-7BFD-8B13-90F877818CA3}</UniqueIdentifier>
     </Filter>
@@ -65,6 +68,12 @@
     </ClInclude>
     <ClInclude Include="src\MatUTM\Core\macros.h">
       <Filter>src\MatUTM\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MatUTM\Ploter\PloterWindow.h">
+      <Filter>src\MatUTM\Ploter</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MatUTM\Scripting\ScriptingLua.h">
+      <Filter>src\MatUTM\Scripting</Filter>
     </ClInclude>
     <ClInclude Include="src\MatUTM\Scripting\ScriptingWindow.h">
       <Filter>src\MatUTM\Scripting</Filter>
@@ -1183,6 +1192,12 @@
     </ClCompile>
     <ClCompile Include="src\MatUTM\Core\main.cpp">
       <Filter>src\MatUTM\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MatUTM\Ploter\PloterWindow.cpp">
+      <Filter>src\MatUTM\Ploter</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MatUTM\Scripting\ScriptingLua.cpp">
+      <Filter>src\MatUTM\Scripting</Filter>
     </ClCompile>
     <ClCompile Include="src\MatUTM\Scripting\ScriptingWindow.cpp">
       <Filter>src\MatUTM\Scripting</Filter>

@@ -10,7 +10,7 @@
 #include "mathpch.h"
 
 #include "MatUTM/Scripting/ScriptingWindow.h"
-
+#include "MatUTM/Ploter/PloterWindow.h"
 
 
 namespace MatUTM {
@@ -40,6 +40,7 @@ namespace MatUTM {
 		EditorLayer* m_EditorLayer;
 		GUI* m_Window;
 		ScriptingWindow* m_ScriptW;
+		PloterWindow* m_PloterW;
 		
 
 		
