@@ -11,13 +11,14 @@ namespace MatUTM {
 	ScriptingWindow::ScriptingWindow(EditorLayer* editor )
 		:Layer("ScriptingWindow") , m_Editor(editor) 
 	{
+		m_lua = new ScriptingLua();
 		
 	}
 
 
 	void ScriptingWindow::OnAttach()
 	{
-			std::function<void()> scriptWindow = []() {
+			std::function<void()> scriptWindow = [&]() {
 				
 				ImGui::Begin("ScriptingWindow");
 				
@@ -27,16 +28,16 @@ namespace MatUTM {
 
 				if(ImGui::Button("Run")) {
 					LOG_WARN("{0}",text);
+					m_lua->SetLuaScriptDataString(text);
+					m_lua->LuaExec();
+					double data = m_lua->GetLuaVariable("x");
+					LOG_WARN("Lua data = {0}", data);
+
 				}
 				
 				
 				
-				//if (ImGui::TreeNode("Multi-line Text Input"))
-				//{
-				//}
-
-				//	ImGui::TreePop();
-
+			
 				
 					
 					ImGui::InputTextMultiline("##source", text, IM_ARRAYSIZE(text), ImVec2(-FLT_MIN, ImGui::GetTextLineHeight() * 30));

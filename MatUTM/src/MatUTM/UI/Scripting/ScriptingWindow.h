@@ -1,6 +1,7 @@
 #pragma once
 #include "MathUTM.h"
 #include "MatUTM/Core/GUI/EditorLayer.h"
+#include "ScriptingLua.h"
 
 namespace MatUTM {
 
@@ -21,7 +22,7 @@ namespace MatUTM {
 
 	private:
 		EditorLayer *m_Editor;
-		
+		ScriptingLua* m_lua;
 
 
 		

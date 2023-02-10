@@ -1,6 +1,0 @@
-﻿  implot.cpp
-  implot_demo.cpp
-  implot_items.cpp
-  Generating Code...
-lua.obj : warning LNK4006: main already defined in luac.obj; second definition ignored
-  ImGui.vcxproj -> C:\Users\alexe\OneDrive\Desktop\MatUTM\MatUTM\vendor\lua\bin\Debug-windows-x86_64\ImGui\ImGui.lib

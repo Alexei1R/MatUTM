@@ -80,7 +80,7 @@
       <PrecompiledHeaderFile>mathpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;GLFW_INCLUDE_NONE;BR_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -98,7 +98,7 @@
       <PrecompiledHeaderFile>mathpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;GLFW_INCLUDE_NONE;BR_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -120,7 +120,7 @@
       <PrecompiledHeaderFile>mathpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;GLFW_INCLUDE_NONE;BR_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -145,7 +145,7 @@
     <ClInclude Include="src\MatUTM\Core\Log\Log.h" />
     <ClInclude Include="src\MatUTM\Core\macros.h" />
     <ClInclude Include="src\MatUTM\UI\Ploter\PloterWindow.h" />
-    <ClInclude Include="src\MatUTM\UI\Scripting\ScriptingLua.h" />
+    <ClInclude Include="src\MatUTM\UI\Scripting\ScriptingPy.h" />
     <ClInclude Include="src\MatUTM\UI\Scripting\ScriptingWindow.h" />
     <ClInclude Include="src\MatUTM\UI\Settings\SettingsWindow.h" />
     <ClInclude Include="src\MathUTM.h" />
@@ -522,7 +522,7 @@
     <ClCompile Include="src\MatUTM\Core\Log\Log.cpp" />
     <ClCompile Include="src\MatUTM\Core\main.cpp" />
     <ClCompile Include="src\MatUTM\UI\Ploter\PloterWindow.cpp" />
-    <ClCompile Include="src\MatUTM\UI\Scripting\ScriptingLua.cpp" />
+    <ClCompile Include="src\MatUTM\UI\Scripting\ScriptingPy.cpp" />
     <ClCompile Include="src\MatUTM\UI\Scripting\ScriptingWindow.cpp" />
     <ClCompile Include="src\MatUTM\UI\Settings\SettingsWindow.cpp" />
     <ClCompile Include="src\mathpch.cpp">
