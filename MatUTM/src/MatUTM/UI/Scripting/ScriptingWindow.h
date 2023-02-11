@@ -1,8 +1,11 @@
 #pragma once
 #include "MathUTM.h"
 #include "MatUTM/Core/GUI/EditorLayer.h"
-#include "ScriptingLua.h"
+#include "Python.h"
+#include "pybind11/pybind11.h"
+#include "pybind11/embed.h"
 
+namespace py = pybind11;
 namespace MatUTM {
 
 
@@ -22,10 +25,15 @@ namespace MatUTM {
 
 	private:
 		EditorLayer *m_Editor;
-		ScriptingLua* m_lua;
 
 
-		
+		int run_python_code(const char* data) {
+			py::scoped_interpreter guard{};
+			std::string text = data;
+			py::exec(text);
+			//py::object add_func = py::globals()["add"];
+			return 1;// add_func(1, 2).cast<int>();
+		}
 
 
 	};

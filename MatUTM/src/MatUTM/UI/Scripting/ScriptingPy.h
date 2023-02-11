@@ -1,35 +1,31 @@
 #pragma once
 #include "MathUTM.h"
-#include "lua/lua.hpp"
-
+#include "Python.h"
+#include "pybind11/pybind11.h"
 
 
 namespace MatUTM {
 
 
-	class ScriptingLua {
+	class ScriptingPy {
 	public:
-		ScriptingLua();
-		~ScriptingLua();
-
-
-	public:
-
-		void SetLuaScriptDataString(const char* data) { m_LuaScriptData = data; };
-
+		ScriptingPy();
+		~ScriptingPy();
 
 
 	public:
-		double GetLuaVariable(const std::string &data);
 
 
-		bool LuaExec();
+
+
+	public:
+
+
 
 
 
 	private:
-		//Lua variables
-		lua_State* L;
+		//Py variables
 
 
 
@@ -38,7 +34,7 @@ namespace MatUTM {
 
 		//My variables
 	private:
-		std::string m_LuaScriptData;
+		std::string m_PyScriptData;
 
 	};
 }

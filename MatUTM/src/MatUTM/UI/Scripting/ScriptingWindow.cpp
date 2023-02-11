@@ -8,10 +8,11 @@
 namespace MatUTM {
 
 
+
+
 	ScriptingWindow::ScriptingWindow(EditorLayer* editor )
 		:Layer("ScriptingWindow") , m_Editor(editor) 
 	{
-		m_lua = new ScriptingLua();
 		
 	}
 
@@ -23,15 +24,29 @@ namespace MatUTM {
 				ImGui::Begin("ScriptingWindow");
 				
 				
-				static char text[1024 * 30] = ">>\n";
+				
 
+				static char text[1024 * 30] = "";
+
+
+				
 
 				if(ImGui::Button("Run")) {
-					LOG_WARN("{0}",text);
-					m_lua->SetLuaScriptDataString(text);
-					m_lua->LuaExec();
-					double data = m_lua->GetLuaVariable("x");
-					LOG_WARN("Lua data = {0}", data);
+					if (text) {
+						LOG_CRITICAL("{0}",text);
+						std::string res;
+
+						try
+						{
+							res = run_python_code(text);
+						}
+						catch (const std::exception&)
+						{
+
+						}
+
+						LOG_WARN("{0}", res);
+					}
 
 				}
 				
@@ -65,7 +80,7 @@ namespace MatUTM {
 	}
 	void ScriptingWindow::OnImGuiRender()
 	{
-
+		
 	}
 
 

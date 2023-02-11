@@ -27,6 +27,26 @@ group ""
 
 
 
+function queryTerminal(command)
+    local success, handle = pcall(io.popen, command)
+    if not success then 
+        return ""
+    end
+    result = handle:read("*a")
+    handle:close()
+    result = string.gsub(result, "\n$", "") -- remove trailing whitespace
+    return result
+end
+function getPythonPath()
+    local p = queryTerminal('python -c "import sys; import os; print(os.path.dirname(sys.executable))"')
+    -- sanitize path before returning it
+    p = string.gsub(p, "\\\\", "\\") -- replace double backslash
+    p = string.gsub(p, "\\", "/") -- flip slashes
+    return p
+end
+function getPythonLib()
+    return queryTerminal("python -c \"import sys; import os; import glob; path = os.path.dirname(sys.executable); libs = glob.glob(path + '/libs/python*'); print(os.path.splitext(os.path.basename(libs[-1]))[0]);\"")
+end
 
 
 ------------------------------
@@ -38,12 +58,32 @@ project "MatUTM"
 	language "C++"
 	cppdialect "C++17"
 	staticruntime "on"
+	flags       { "MultiProcessorCompile" }
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 	pchheader "mathpch.h"
 	pchsource "MatUTM/src/mathpch.cpp"
+
+
+
+	
+	pythonPath      = getPythonPath()
+	pythonIncludePath = pythonPath .. "/include/"
+	pythonLibPath     = pythonPath .. "/libs/"
+	pythonLib         = getPythonLib()
+
+	if pythonPath == "" or pythonLib == "" then
+	    error("Failed to find python path!")
+	else
+	    print("Python includes: " .. pythonIncludePath)
+	    print("Python libs: " .. pythonLibPath)
+	    print("lib: " .. pythonLib)
+	end
+
+
+
 
 	files
 	{
@@ -65,11 +105,18 @@ project "MatUTM"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
+		"%{prj.name}/vendor/pybind11/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.glm}",
+		pythonIncludePath,
 	}
+	libdirs{
+		pythonLibPath
+	}
+
+	
 
 	links 
 	{ 
@@ -77,7 +124,21 @@ project "MatUTM"
 		"Glad",
 		"ImGui",
 		"opengl32.lib",
+		pythonLib
 	}
+
+
+	--if os.host() == "windows" then
+    --    cppdialect "C++17"
+    --    systemversion("latest")
+    --    system      "windows"
+    --   
+--
+    --    symbolspath '$(TargetName).pdb'
+    --    libdirs     { pythonLibPath }
+    --    links { pythonLib }
+--
+	--	end
 
 	filter "system:windows"
 		systemversion "latest"
