@@ -5,8 +5,9 @@
 #include "pybind11/pybind11.h"
 #include "pybind11/embed.h"
 
-namespace py = pybind11;
 namespace MatUTM {
+
+	namespace py = pybind11;
 
 
 	class ScriptingWindow : public Layer {
@@ -27,13 +28,7 @@ namespace MatUTM {
 		EditorLayer *m_Editor;
 
 
-		int run_python_code(const char* data) {
-			py::scoped_interpreter guard{};
-			std::string text = data;
-			py::exec(text);
-			//py::object add_func = py::globals()["add"];
-			return 1;// add_func(1, 2).cast<int>();
-		}
+		
 
 
 	};

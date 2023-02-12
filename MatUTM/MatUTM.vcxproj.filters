@@ -78,9 +78,6 @@
     <ClInclude Include="src\MatUTM\UI\Ploter\PloterWindow.h">
       <Filter>src\MatUTM\UI\Ploter</Filter>
     </ClInclude>
-    <ClInclude Include="src\MatUTM\UI\Scripting\ScriptingPy.h">
-      <Filter>src\MatUTM\UI\Scripting</Filter>
-    </ClInclude>
     <ClInclude Include="src\MatUTM\UI\Scripting\ScriptingWindow.h">
       <Filter>src\MatUTM\UI\Scripting</Filter>
     </ClInclude>
@@ -1204,9 +1201,6 @@
     </ClCompile>
     <ClCompile Include="src\MatUTM\UI\Ploter\PloterWindow.cpp">
       <Filter>src\MatUTM\UI\Ploter</Filter>
-    </ClCompile>
-    <ClCompile Include="src\MatUTM\UI\Scripting\ScriptingPy.cpp">
-      <Filter>src\MatUTM\UI\Scripting</Filter>
     </ClCompile>
     <ClCompile Include="src\MatUTM\UI\Scripting\ScriptingWindow.cpp">
       <Filter>src\MatUTM\UI\Scripting</Filter>

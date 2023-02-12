@@ -1,2 +1,1 @@
-﻿  ScriptingWindow.cpp
-  MatUTM.vcxproj -> C:\Users\alexe\OneDrive\Desktop\MatUTM\bin\Debug-windows-x86_64\MatUTM\MatUTM.exe
+﻿LINK : fatal error LNK1104: cannot open file 'python311_d.lib'

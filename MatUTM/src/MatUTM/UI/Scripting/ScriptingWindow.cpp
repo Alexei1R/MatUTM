@@ -7,8 +7,16 @@
 
 namespace MatUTM {
 
+	
 
 
+	void add(py::module_& m) {
+		m.def("add", []() { LOG_WARN("Function called") });
+	}
+
+	PYBIND11_MODULE(test, m) {
+		add(m);
+	}
 
 	ScriptingWindow::ScriptingWindow(EditorLayer* editor )
 		:Layer("ScriptingWindow") , m_Editor(editor) 
@@ -16,6 +24,18 @@ namespace MatUTM {
 		
 	}
 
+	void test(char * data) {
+		py::initialize_interpreter();
+		try {
+			py::object mainScope = py::module::import("__main__").attr("__dict__");
+			py::exec(data,mainScope);
+		}
+		catch (py::error_already_set const& pythonErr) {
+			LOG_CRITICAL("{0}", pythonErr.what());
+		}
+		py::finalize_interpreter();
+	}
+	
 
 	void ScriptingWindow::OnAttach()
 	{
@@ -26,24 +46,27 @@ namespace MatUTM {
 				
 				
 
-				static char text[1024 * 30] = "";
+				static char text[1024 * 30] = R"(array = [232,4,254,3,23,2,3,455,3,5,546,6,7,7,8,34,35,67,8,9,2,2,3,4,5,6,7,8]
 
 
+len = len(array)
+
+for x in array:
+  print(x)
+
+print("\n")
+print(len))";
+
+				
 				
 
 				if(ImGui::Button("Run")) {
 					if (text) {
-						LOG_CRITICAL("{0}",text);
+						LOG_INFO("{0}",text);
 						std::string res;
 
-						try
-						{
-							res = run_python_code(text);
-						}
-						catch (const std::exception&)
-						{
-
-						}
+						test(text);
+						
 
 						LOG_WARN("{0}", res);
 					}
