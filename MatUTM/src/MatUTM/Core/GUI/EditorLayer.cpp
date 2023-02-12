@@ -73,6 +73,11 @@ namespace MatUTM {
 				ImGui::DockSpace(dockspace_id, ImVec2(0.0f, 0.0f), dockspace_flags);
 			}
 
+			ImGuiStyle* style = &ImGui::GetStyle();
+			style->Colors[ImGuiCol_Button] = ImColor(23, 38, 37,100);
+			style->Colors[ImGuiCol_ButtonActive] = ImColor(36, 66, 64);
+			style->Colors[ImGuiCol_ButtonHovered] = ImColor(31, 54, 52);
+
 			DrawMenu();
 
 			//ImGui::Begin("Settings");

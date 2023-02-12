@@ -124,7 +124,6 @@ project "MatUTM"
 		"Glad",
 		"ImGui",
 		"opengl32.lib",
-		pythonLib
 	}
 
 

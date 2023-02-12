@@ -4,6 +4,7 @@
 #include "Python.h"
 #include "pybind11/pybind11.h"
 #include "pybind11/embed.h"
+#include "TextEditor.h"
 
 namespace MatUTM {
 
@@ -26,7 +27,7 @@ namespace MatUTM {
 
 	private:
 		EditorLayer *m_Editor;
-
+		TextEditor m_TextEditor;
 
 		
 

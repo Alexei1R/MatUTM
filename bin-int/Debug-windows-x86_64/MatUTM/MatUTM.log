@@ -1,1 +1,15 @@
-﻿LINK : fatal error LNK1104: cannot open file 'python311_d.lib'
+﻿  Application.cpp
+  EditorLayer.cpp
+  GUI.cpp
+  Layer.cpp
+  LayerStack.cpp
+  Log.cpp
+  main.cpp
+  PloterWindow.cpp
+  ScriptingWindow.cpp
+  TextEditor.cpp
+C:\Users\alexe\OneDrive\Desktop\MatUTM\MatUTM\src\MatUTM\UI\Ploter\PloterWindow.cpp(48,17): warning C4244: '=': conversion from 'size_t' to 'float', possible loss of data
+C:\Users\alexe\OneDrive\Desktop\MatUTM\MatUTM\src\MatUTM\Core\GUI\GUI.cpp(59,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  SettingsWindow.cpp
+  mathpch.cpp
+LINK : fatal error LNK1104: cannot open file 'python311_d.lib'

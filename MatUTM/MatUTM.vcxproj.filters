@@ -81,6 +81,9 @@
     <ClInclude Include="src\MatUTM\UI\Scripting\ScriptingWindow.h">
       <Filter>src\MatUTM\UI\Scripting</Filter>
     </ClInclude>
+    <ClInclude Include="src\MatUTM\UI\Scripting\TextEditor.h">
+      <Filter>src\MatUTM\UI\Scripting</Filter>
+    </ClInclude>
     <ClInclude Include="src\MatUTM\UI\Settings\SettingsWindow.h">
       <Filter>src\MatUTM\UI\Settings</Filter>
     </ClInclude>
@@ -1203,6 +1206,9 @@
       <Filter>src\MatUTM\UI\Ploter</Filter>
     </ClCompile>
     <ClCompile Include="src\MatUTM\UI\Scripting\ScriptingWindow.cpp">
+      <Filter>src\MatUTM\UI\Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MatUTM\UI\Scripting\TextEditor.cpp">
       <Filter>src\MatUTM\UI\Scripting</Filter>
     </ClCompile>
     <ClCompile Include="src\MatUTM\UI\Settings\SettingsWindow.cpp">

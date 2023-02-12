@@ -10,21 +10,16 @@ namespace MatUTM {
 	
 
 
-	void add(py::module_& m) {
-		m.def("add", []() { LOG_WARN("Function called") });
-	}
-
-	PYBIND11_MODULE(test, m) {
-		add(m);
-	}
+	
 
 	ScriptingWindow::ScriptingWindow(EditorLayer* editor )
 		:Layer("ScriptingWindow") , m_Editor(editor) 
 	{
+
 		
 	}
 
-	void test(char * data) {
+	void test(const char * data) {
 		py::initialize_interpreter();
 		try {
 			py::object mainScope = py::module::import("__main__").attr("__dict__");
@@ -39,46 +34,54 @@ namespace MatUTM {
 
 	void ScriptingWindow::OnAttach()
 	{
-			std::function<void()> scriptWindow = [&]() {
+		std::function<void()> scriptWindow = [&]() {
+
+			ImGui::Begin("ScriptingWindow");
+			ImVec2 m_WSize = ImGui::GetWindowSize();
+			float m_Button = 33;
+
+
+
+			/*ImGui::Columns(2);
+			ImGui::SetColumnOffset(1,300)*/
+			//ImGui::SameLine(0.0, -1.0);
+			ImGui::Spacing();
+			/*if(ImGui::BeginCombo("##ScriptCombo", "Internal")) {
+				ImGui::EndCombo();
+			}; */
+
+			/*ImGui::SameLine();*/
+			if (ImGui::Button("Open", ImVec2((m_Button * 2), (m_Button)))) {};
+			ImGui::SameLine();
+			if (ImGui::Button("Run", ImVec2((m_Button * 2), (m_Button)))) {
+
+				//LOG_INFO("{0}",m_TextEditor.GetText());
+				test(m_TextEditor.GetText().c_str());
+			};
+			ImGui::SameLine();
+			if (ImGui::Button("Stop", ImVec2((m_Button * 2), (m_Button)))) {};
+
+
+
+
+
+			ImGui::Spacing();
+			m_TextEditor.SetShowWhitespaces(false);
+			m_TextEditor.SetReadOnly(false);
+			m_TextEditor.SetPalette(TextEditor::GetDarkPalette());
+			m_TextEditor.SetLanguageDefinition(TextEditor::LanguageDefinition::CPlusPlus());
+
+			m_TextEditor.Render("Scripting", ImVec2(m_WSize.x - 18, (m_WSize.y - m_Button) - 50));
 				
-				ImGui::Begin("ScriptingWindow");
-				
-				
 				
 
-				static char text[1024 * 30] = R"(array = [232,4,254,3,23,2,3,455,3,5,546,6,7,7,8,34,35,67,8,9,2,2,3,4,5,6,7,8]
-
-
-len = len(array)
-
-for x in array:
-  print(x)
-
-print("\n")
-print(len))";
-
 				
-				
-
-				if(ImGui::Button("Run")) {
-					if (text) {
-						LOG_INFO("{0}",text);
-						std::string res;
-
-						test(text);
-						
-
-						LOG_WARN("{0}", res);
-					}
-
-				}
 				
 				
 				
 			
 				
 					
-					ImGui::InputTextMultiline("##source", text, IM_ARRAYSIZE(text), ImVec2(-FLT_MIN, ImGui::GetTextLineHeight() * 30));
 				
 			
 
