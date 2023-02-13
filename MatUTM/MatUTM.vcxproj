@@ -150,6 +150,7 @@
     <ClInclude Include="src\MatUTM\Core\Layers\Layer.h" />
     <ClInclude Include="src\MatUTM\Core\Layers\LayerStack.h" />
     <ClInclude Include="src\MatUTM\Core\Log\Log.h" />
+    <ClInclude Include="src\MatUTM\Core\Util\PlatformUtil.h" />
     <ClInclude Include="src\MatUTM\Core\macros.h" />
     <ClInclude Include="src\MatUTM\UI\Ploter\PloterWindow.h" />
     <ClInclude Include="src\MatUTM\UI\Scripting\ScriptingWindow.h" />
@@ -527,6 +528,7 @@
     <ClCompile Include="src\MatUTM\Core\Layers\Layer.cpp" />
     <ClCompile Include="src\MatUTM\Core\Layers\LayerStack.cpp" />
     <ClCompile Include="src\MatUTM\Core\Log\Log.cpp" />
+    <ClCompile Include="src\MatUTM\Core\Util\PlatformUtil.cpp" />
     <ClCompile Include="src\MatUTM\Core\main.cpp" />
     <ClCompile Include="src\MatUTM\UI\Ploter\PloterWindow.cpp" />
     <ClCompile Include="src\MatUTM\UI\Scripting\ScriptingWindow.cpp" />

@@ -27,6 +27,25 @@ namespace MatUTM {
 		}
 		catch (py::error_already_set const& pythonErr) {
 			LOG_CRITICAL("{0}", pythonErr.what());
+
+
+
+			//ImVec2 center = ImGui::GetMainViewport()->GetCenter();
+			//ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
+
+			/*if (ImGui::BeginPopupModal("Delete?", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+			{
+				ImGui::Text("All those beautiful files will be deleted.\nThis operation cannot be undone!\n\n");
+				ImGui::Separator();
+
+				if (ImGui::Button("OK", ImVec2(120, 0))) { ImGui::CloseCurrentPopup(); }
+				ImGui::SetItemDefaultFocus();
+				ImGui::SameLine();
+				if (ImGui::Button("Cancel", ImVec2(120, 0))) { ImGui::CloseCurrentPopup(); }
+				ImGui::EndPopup();
+			}*/
+
+
 		}
 		py::finalize_interpreter();
 	}
@@ -40,7 +59,7 @@ namespace MatUTM {
 			ImVec2 m_WSize = ImGui::GetWindowSize();
 			float m_Button = 33;
 
-
+			
 
 			/*ImGui::Columns(2);
 			ImGui::SetColumnOffset(1,300)*/
@@ -51,7 +70,15 @@ namespace MatUTM {
 			}; */
 
 			/*ImGui::SameLine();*/
-			if (ImGui::Button("Open", ImVec2((m_Button * 2), (m_Button)))) {};
+			if (ImGui::Button("Open", ImVec2((m_Button * 2), (m_Button)))) {
+				std::string path = MatUTM::FileDialogs::OpenFile("");
+				LOG_INFO("\n\n\n\n PATH : {0} \n\n\n", path);
+			};
+			ImGui::SameLine();
+			if (ImGui::Button("Save", ImVec2((m_Button * 2), (m_Button)))) {
+				std::string path = MatUTM::FileDialogs::OpenFile("");
+				LOG_INFO("\n\n\n\n PATH : {0} \n\n\n", path);
+			};
 			ImGui::SameLine();
 			if (ImGui::Button("Run", ImVec2((m_Button * 2), (m_Button)))) {
 

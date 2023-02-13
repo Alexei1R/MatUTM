@@ -19,6 +19,9 @@
     <Filter Include="src\MatUTM\Core\Log">
       <UniqueIdentifier>{9D4A951E-09AC-722C-9219-B9DEFE79A9EB}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\MatUTM\Core\Util">
+      <UniqueIdentifier>{99A343F1-8532-CDBA-2E51-E1B51ABFDD60}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\MatUTM\UI">
       <UniqueIdentifier>{A1AEFB6D-0D6F-77A4-D6A9-C0214229BC80}</UniqueIdentifier>
     </Filter>
@@ -71,6 +74,9 @@
     </ClInclude>
     <ClInclude Include="src\MatUTM\Core\Log\Log.h">
       <Filter>src\MatUTM\Core\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MatUTM\Core\Util\PlatformUtil.h">
+      <Filter>src\MatUTM\Core\Util</Filter>
     </ClInclude>
     <ClInclude Include="src\MatUTM\Core\macros.h">
       <Filter>src\MatUTM\Core</Filter>
@@ -1198,6 +1204,9 @@
     </ClCompile>
     <ClCompile Include="src\MatUTM\Core\Log\Log.cpp">
       <Filter>src\MatUTM\Core\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MatUTM\Core\Util\PlatformUtil.cpp">
+      <Filter>src\MatUTM\Core\Util</Filter>
     </ClCompile>
     <ClCompile Include="src\MatUTM\Core\main.cpp">
       <Filter>src\MatUTM\Core</Filter>
