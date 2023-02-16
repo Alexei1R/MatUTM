@@ -1,7 +1,7 @@
 "# MatUTM" 
 
 ## Dependencies
-  -Python
+  -Python (please also check debug binary to be able to compile the application in debug mode)
   
   -Git
   
