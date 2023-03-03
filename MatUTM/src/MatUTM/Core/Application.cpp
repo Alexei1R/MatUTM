@@ -1,12 +1,13 @@
 #include "mathpch.h"
 #include "Application.h"
+#include "pybind11/pybind11.h"
 
 
 
 namespace MatUTM {
 	Application::Application()
 	{
-		
+		pybind11::initialize_interpreter();
 		m_Window = new GUI();
 		m_EditorLayer = new MatUTM::EditorLayer();
 		m_ScriptW = new MatUTM::ScriptingWindow(m_EditorLayer);
